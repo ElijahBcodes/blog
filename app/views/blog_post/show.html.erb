@@ -1,0 +1,7 @@
+<h3><%= @blog_post.title %></h3>
+<p><%= @blog_post.content %></p>
+<br/>
+
+<p><% link_to 'Edit', edit_blog_path(@blog_post) %></p>
+<p><%= link_to 'Blog Archive', blog_posts_path %></p>
+<%= button_to "Delete blog post", delete_blog_path(@blog_post), :method => 'delete'%>

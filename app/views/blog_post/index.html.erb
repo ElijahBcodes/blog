@@ -1,0 +1,9 @@
+<h1>Web Developer Blog</h1>
+<img src="https://live.staticflickr.com/65535/48764206058_f6602e8d66_m.jpg" alt="Beach with a sunset"/>
+<ul>
+  <% @blog_posts.each do |blog_post| %>
+  <h2><%= link_to blog_post.title, blog_post_path(blog_post) %></h2>
+  <p><%= blog_post.content %><p/>
+  <% end %>
+</ul>
+<p><%= link_to 'New Blog Post', new_blog_post_path %></p>
