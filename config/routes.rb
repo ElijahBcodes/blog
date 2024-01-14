@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   #Delete route
   delete 'blog_posts/:id' => 'blog_post#destroy', as: 'delete_blog'
   #Edit route 
+  patch 'blog_posts/:id' => 'blog_post#update'
   get 'blog_posts/:id/edit' => 'blog_post#edit', as: 'edit_blog'
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
