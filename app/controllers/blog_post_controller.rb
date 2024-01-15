@@ -22,7 +22,6 @@ class BlogPostController < ApplicationController
 
   def edit
     @blog_post = BlogPost.find(params[:id])
-    redirect_to edit_blog_path
   end
 
   def update
@@ -31,16 +30,19 @@ class BlogPostController < ApplicationController
 
     if @blog_post.update(blog_post_params)
       redirect_to @blog_post
-      flash.notice = "BlogPost '#{@blog_post.title}' Updated!"
+      flash.notice = "BlogPost  Updated!"
     else
-      render :edit, status: :unprocessable_entity
+      render :edit
     end
   end
 
   def destroy
-    @blogpost = BlogPost.find(params[:id])
-    if @blogpost.destroy
+    @blog_post = BlogPost.find(params[:id])
+    @blog_post.destroy
+    if @blog_post.destroy
+      flash.notice = "was destroyed."
       redirect_to blog_posts_path
+      
     end
   end
 
