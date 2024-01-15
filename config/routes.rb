@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'blog/index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   get 'blog_posts' => 'blog_post#index'

@@ -72,3 +72,5 @@ end
 
 gem "rspec", "~> 3.12"
 gem "standard", group: [:development, :test]
+
+gem "devise", "~> 4.9"
