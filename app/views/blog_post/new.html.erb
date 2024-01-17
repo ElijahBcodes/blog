@@ -1,3 +1,16 @@
 <h3>Add a New Blog Post</h3>
 
 <%= redner partial: "form, locals:{blog_post%>
+
+<%= form_with model: @blog_post do |form| %>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+
+    <br>
+    <%= form.label :content %>
+    <%= form.text_field :content %>
+
+    <br>
+    <%= form.submit "Add Blog Post" %>
+<% end %>
+

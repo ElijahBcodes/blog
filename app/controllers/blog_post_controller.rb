@@ -41,8 +41,7 @@ class BlogPostController < ApplicationController
     @blog_post.destroy
     if @blog_post.destroy
       flash.notice = "was destroyed."
-      redirect_to blog_posts_path
-      
+      redirect_to blog_posts_path   
     end
   end
 
