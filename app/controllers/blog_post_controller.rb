@@ -16,7 +16,7 @@ class BlogPostController < ApplicationController
     if @blog_post.valid?
       redirect_to blog_posts_path
     else
-      redirect_to new_blog_post_path
+      puts @blog_post.errors.full_messages
     end
   end
 
